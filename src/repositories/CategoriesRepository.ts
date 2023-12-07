@@ -30,6 +30,11 @@ class CategoriesRepository {
 
     this.categories.push(category)
   }
+
+  // O retorno no método LIST é um array de Category
+  list(): Category[] {
+    return this.categories
+  }
 }
 
 export { CategoriesRepository }
