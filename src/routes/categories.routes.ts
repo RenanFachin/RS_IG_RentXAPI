@@ -12,6 +12,13 @@ categoriesRoutes.post('/', (request, response) => {
   // Dados vindos do body da requisição
   const { name, description } = request.body
 
+  // Verificando se já existe uma categoria com este nome
+  const categoryAlreadyExists = categoriesRepository.findByName(name)
+
+  if (categoryAlreadyExists) {
+    return response.status(400).json({ error: 'Category already exists' })
+  }
+
   // Utilizando o repository, para que ele faça a conexão com o db e registre
   categoriesRepository.create({ name, description })
 
