@@ -1,23 +1,27 @@
 import { Router } from 'express'
-import { v4 as uuidv4 } from 'uuid'
+
+import { Category } from '../model/Category'
 
 const categoriesRoutes = Router()
 
-const categories = []
+// Definindo que categoryas deve serguir as tipagens do model Category, que é um array e que inicializa como vazio
+const categories: Category[] = []
 
 categoriesRoutes.post('/', (request, response) => {
   // Dados vindos do body da requisição
   const { name, description } = request.body
 
-  const category = {
-    id: uuidv4(),
+  // Instanciando a classe Category
+  const category = new Category()
+  Object.assign(category, {
     name,
     description,
-  }
+    created_at: new Date(),
+  })
 
   categories.push(category)
 
-  return response.status(201).send()
+  return response.status(201).json({ category })
 })
 
 export { categoriesRoutes }
