@@ -6,3 +6,4 @@ API para registros de uma locadora de automóveis.
 <!-- https://www.npmjs.com/package/tsx -->
 <!-- https://www.npmjs.com/package/uuid -->
 <!-- https://www.npmjs.com/package/typescript -->
+<!-- https://www.npmjs.com/package/multer --> 
