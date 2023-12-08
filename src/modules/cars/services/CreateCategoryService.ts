@@ -9,6 +9,7 @@ interface IRequest {
 // service não precisa conhecer qual o banco de dados e nem nada
 class CreateCategoryService {
   // SOLID - Inversão de dependência
+  // ICategoriesRepository -> é o contrato, ou seja, atende ao principio de liskov
   // eslint-disable-next-line no-useless-constructor
   constructor(private categoriesRepository: ICategoriesRepository) {}
 

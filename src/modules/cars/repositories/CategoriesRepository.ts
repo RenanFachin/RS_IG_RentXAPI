@@ -4,6 +4,7 @@ import {
   ICreateCategoryDTO,
 } from './ICategoriesRepository'
 
+// implements ICategoriesRepository -> É o princípio de substituição de liskov
 class CategoriesRepository implements ICategoriesRepository {
   // Definindo que categoryas deve serguir as tipagens do model Category, que é um array
   private categories: Category[]
