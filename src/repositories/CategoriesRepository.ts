@@ -1,12 +1,10 @@
 import { Category } from '../model/Category'
+import {
+  ICategoriesRepository,
+  ICreateCategoryDTO,
+} from './ICategoriesRepository'
 
-// Criando o DTO
-interface ICreateCategoryDTO {
-  name: string
-  description: string
-}
-
-class CategoriesRepository {
+class CategoriesRepository implements ICategoriesRepository {
   // Definindo que categoryas deve serguir as tipagens do model Category, que é um array
   private categories: Category[]
 

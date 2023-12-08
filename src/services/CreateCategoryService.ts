@@ -1,4 +1,4 @@
-import { CategoriesRepository } from '../repositories/CategoriesRepository'
+import { ICategoriesRepository } from '../repositories/ICategoriesRepository'
 
 interface IRequest {
   name: string
@@ -10,7 +10,7 @@ interface IRequest {
 class CreateCategoryService {
   // SOLID - Inversão de dependência
   // eslint-disable-next-line no-useless-constructor
-  constructor(private categoriesRepository: CategoriesRepository) {}
+  constructor(private categoriesRepository: ICategoriesRepository) {}
 
   execute({ name, description }: IRequest): void {
     // Verificando se já existe uma categoria com este nome
