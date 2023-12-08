@@ -1,6 +1,7 @@
 import { Router } from 'express'
 
 import { CategoriesRepository } from '../repositories/CategoriesRepository'
+import { CreateCategoryService } from '../services/CreateCategoryService'
 
 // Criando a rota
 const categoriesRoutes = Router()
@@ -12,15 +13,10 @@ categoriesRoutes.post('/', (request, response) => {
   // Dados vindos do body da requisição
   const { name, description } = request.body
 
-  // Verificando se já existe uma categoria com este nome
-  const categoryAlreadyExists = categoriesRepository.findByName(name)
-
-  if (categoryAlreadyExists) {
-    return response.status(400).json({ error: 'Category already exists' })
-  }
-
-  // Utilizando o repository, para que ele faça a conexão com o db e registre
-  categoriesRepository.create({ name, description })
+  // SOLID -> Princípio da responsabilidade única
+  // Inicializando o service passando o repositóries como argumento e após, chamando o método e passando os dados necessários
+  const createCategoryService = new CreateCategoryService(categoriesRepository)
+  createCategoryService.execute({ name, description })
 
   return response.status(201).send()
 })
