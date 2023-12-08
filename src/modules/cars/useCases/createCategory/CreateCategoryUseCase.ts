@@ -1,4 +1,4 @@
-import { ICategoriesRepository } from '../repositories/ICategoriesRepository'
+import { ICategoriesRepository } from '../../repositories/ICategoriesRepository'
 
 interface IRequest {
   name: string
@@ -7,7 +7,7 @@ interface IRequest {
 
 // O service não deve conhecer o request e o response
 // service não precisa conhecer qual o banco de dados e nem nada
-class CreateCategoryService {
+class CreateCategoryUseCase {
   // SOLID - Inversão de dependência
   // ICategoriesRepository -> é o contrato, ou seja, atende ao principio de liskov
   // eslint-disable-next-line no-useless-constructor
@@ -26,4 +26,4 @@ class CreateCategoryService {
   }
 }
 
-export { CreateCategoryService }
+export { CreateCategoryUseCase }

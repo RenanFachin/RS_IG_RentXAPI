@@ -1,7 +1,7 @@
 import { Router } from 'express'
 
 import { CategoriesRepository } from '../modules/cars/repositories/CategoriesRepository'
-import { CreateCategoryService } from '../modules/cars/services/CreateCategoryService'
+import { createCategoryController } from '../modules/cars/useCases/createCategory'
 
 // Criando a rota
 const categoriesRoutes = Router()
@@ -10,15 +10,7 @@ const categoriesRepository = new CategoriesRepository()
 
 // Criação de uma nova categoria
 categoriesRoutes.post('/', (request, response) => {
-  // Dados vindos do body da requisição
-  const { name, description } = request.body
-
-  // SOLID -> Princípio da responsabilidade única
-  // Inicializando o service passando o repositóries como argumento e após, chamando o método e passando os dados necessários
-  const createCategoryService = new CreateCategoryService(categoriesRepository)
-  createCategoryService.execute({ name, description })
-
-  return response.status(201).send()
+  return createCategoryController.handle(request, response)
 })
 
 // Listagem de todas categorias cadastradas
