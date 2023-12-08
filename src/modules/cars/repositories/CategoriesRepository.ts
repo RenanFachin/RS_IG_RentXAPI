@@ -9,9 +9,25 @@ class CategoriesRepository implements ICategoriesRepository {
   // Definindo que categoryas deve serguir as tipagens do model Category, que é um array
   private categories: Category[]
 
-  constructor() {
+  // SINGLETON PATTERN
+  // eslint-disable-next-line no-use-before-define
+  private static INSTANCE: CategoriesRepository
+
+  // O construtor agora é private para garantir o singleton pattern, somente a classe CategoriesRepository poderá chamar o construtor
+  private constructor() {
     // inicializando categories como vazio
     this.categories = []
+  }
+
+  public static getInstance(): CategoriesRepository {
+    // Caso INSTANCE não tenha nenhum valor atribuido
+    if (!CategoriesRepository.INSTANCE) {
+      // Criando uma instancia
+      CategoriesRepository.INSTANCE = new CategoriesRepository()
+    }
+
+    // Caso já exista uma instância criada, somente retornar
+    return CategoriesRepository.INSTANCE
   }
 
   // Create é responsável por registrar algo dentro do array categories

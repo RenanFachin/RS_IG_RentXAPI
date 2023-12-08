@@ -3,7 +3,7 @@ import { CreateCategoryController } from './CreateCategoryController'
 import { CreateCategoryUseCase } from './CreateCategoryUseCase'
 
 // Instanciando o repository
-const categoriesRepository = new CategoriesRepository()
+const categoriesRepository = CategoriesRepository.getInstance()
 
 // Instanciando o useCase, passando o repository como argumento
 const createCategoryUseCase = new CreateCategoryUseCase(categoriesRepository)
