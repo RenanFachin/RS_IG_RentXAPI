@@ -1,8 +1,8 @@
-import { Category } from '../model/Category'
+import { Category } from '../../model/Category'
 import {
   ICategoriesRepository,
   ICreateCategoryDTO,
-} from './ICategoriesRepository'
+} from '../ICategoriesRepository'
 
 // implements ICategoriesRepository -> É o princípio de substituição de liskov
 class CategoriesRepository implements ICategoriesRepository {

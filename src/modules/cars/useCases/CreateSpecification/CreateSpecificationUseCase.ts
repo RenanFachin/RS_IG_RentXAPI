@@ -1,12 +1,12 @@
-import { ISpecificationsRepository } from '../repositories/ISpecificationsRepository'
+import { ISpecificationsRepository } from '../../repositories/ISpecificationsRepository'
 
 interface IRequest {
   name: string
   description: string
 }
 
-class CreateSpecificationService {
-  // O construtor do service vai receber a interface para implementação do repository
+class CreateSpecificationUseCase {
+  // O construtor do UseCase vai receber a interface para implementação do repository
   // eslint-disable-next-line no-useless-constructor
   constructor(private specificationsRepository: ISpecificationsRepository) {}
 
@@ -26,4 +26,4 @@ class CreateSpecificationService {
   }
 }
 
-export { CreateSpecificationService }
+export { CreateSpecificationUseCase }
