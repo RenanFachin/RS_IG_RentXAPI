@@ -8,7 +8,7 @@ interface IImportCategory {
 }
 class ImportCategoryUseCase {
   // eslint-disable-next-line no-useless-constructor
-  constructor(private categoriesRepository: ICategoriesRepository) {}
+  constructor(private categoriesRepository: ICategoriesRepository) { }
 
   loadCategories(file: Express.Multer.File): Promise<IImportCategory[]> {
     return new Promise((resolve, reject) => {
@@ -50,7 +50,22 @@ class ImportCategoryUseCase {
   // Como o retorno do loadCategories é uma promise, precisamos definicar o método execute como async
   async execute(file: Express.Multer.File): Promise<void> {
     const categories = await this.loadCategories(file)
-    console.log(categories)
+    // console.log(categories)
+
+    // Inserindo no db
+    // Percorrendo item a item do array
+    categories.map(async (category) => {
+      const { name, description } = category
+
+      // Verificando se já é uma categoria existente
+      const isCategoryExists = this.categoriesRepository.findByName(name)
+      if (!isCategoryExists) {
+        this.categoriesRepository.create({
+          name,
+          description,
+        })
+      }
+    })
   }
 }
 
