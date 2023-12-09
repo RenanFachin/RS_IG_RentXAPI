@@ -8,6 +8,12 @@ class ImportCategoryController {
   handle(request: Request, response: Response): Response {
     const { file } = request
 
+    if (!file) {
+      return response.json({
+        error: 'File is required!',
+      })
+    }
+
     this.importCategoryUseCase.execute(file)
 
     return response.send()
