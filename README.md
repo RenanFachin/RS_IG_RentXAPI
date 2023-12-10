@@ -24,9 +24,14 @@ npm install
 npm run dev
 ```
 
-Subindo um container de um database em postgres
+Subindo um container de um database com postgres
 ```bash
 docker-compose up
+```
+
+Criando as tabelas (Rodando as migrations)
+```bash
+npm run typeorm migration:run
 ```
 
 ## Documentação do projeto
