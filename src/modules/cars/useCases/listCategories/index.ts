@@ -3,7 +3,7 @@ import { ListCategoriesController } from './ListCategoriesController'
 import { ListCategoriesUseCase } from './ListCategoriesUseCase'
 
 // O useCase precisa do repository para ser instanciado
-const listCategoriesRepository = CategoriesRepository.getInstance()
+const listCategoriesRepository = null
 
 // Controller precisa do useCase para ser instanciado
 const listCategoriesUseCase = new ListCategoriesUseCase(
