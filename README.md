@@ -1,4 +1,4 @@
-## RentalX
+## RentX API
 API para registros de uma locadora de automóveis.
 
 
@@ -24,6 +24,11 @@ npm install
 npm run dev
 ```
 
+Subindo um container de um database em postgres
+```bash
+docker-compose up
+```
+
 ## Documentação do projeto
 
 Para acessar a documentação, é necessário iniciar o servidor e após isto acessar **http://localhost:3333/api-docs**
@@ -36,3 +41,4 @@ Para acessar a documentação, é necessário iniciar o servidor e após isto ac
 <!-- https://www.npmjs.com/package/multer --> 
 <!-- https://www.npmjs.com/package/csv-parse -->
 <!-- https://www.npmjs.com/package/swagger-ui-express -->
+<!-- https://typeorm.io/ -->
