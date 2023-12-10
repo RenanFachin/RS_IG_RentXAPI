@@ -1,4 +1,4 @@
-import { Category } from '../model/Category'
+import { Category } from '../entities/Category'
 
 // Criando o DTO
 export interface ICreateCategoryDTO {
