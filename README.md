@@ -122,3 +122,4 @@ Create a new specification
 <!-- https://www.npmjs.com/package/swagger-ui-express -->
 <!-- https://typeorm.io/ -->
 <!-- https://www.npmjs.com/package/tsyringe -->
+<!-- https://www.npmjs.com/package/bcrypt -->
