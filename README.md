@@ -123,3 +123,4 @@ Create a new specification
 <!-- https://typeorm.io/ -->
 <!-- https://www.npmjs.com/package/tsyringe -->
 <!-- https://www.npmjs.com/package/bcrypt -->
+<!-- https://www.npmjs.com/package/jsonwebtoken -->
