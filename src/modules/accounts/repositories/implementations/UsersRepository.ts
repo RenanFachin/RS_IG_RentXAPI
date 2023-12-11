@@ -17,7 +17,6 @@ class UsersRepository implements IUsersRepository {
     // Criando um objeto com os dados
     const user = this.repository.create({
       name: data.name,
-      username: data.username,
       password: data.password,
       email: data.email,
       driver_license: data.driver_license,
