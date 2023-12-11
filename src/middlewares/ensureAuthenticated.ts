@@ -2,6 +2,7 @@ import { Request, Response, NextFunction } from 'express'
 import { verify } from 'jsonwebtoken'
 import dotEnv from 'dotenv'
 import { UsersRepository } from '../modules/accounts/repositories/implementations/UsersRepository'
+import { AppError } from '../errors/AppError'
 
 dotEnv.config()
 
@@ -19,7 +20,7 @@ export async function ensureAuthenticated(
 
   // verificar se o authHeader está preenchido
   if (!authHeader) {
-    throw new Error('Token missing')
+    throw new AppError('Token missing', 401)
   }
 
   // Desestruturando o token existente
@@ -45,11 +46,11 @@ export async function ensureAuthenticated(
     const user = usersRepository.findById(decoded.sub)
 
     if (!user) {
-      throw new Error('User does not exists!')
+      throw new AppError('User does not exists!', 401)
     }
 
     next()
   } catch {
-    throw new Error('Invalid token')
+    throw new AppError('Invalid token', 401)
   }
 }

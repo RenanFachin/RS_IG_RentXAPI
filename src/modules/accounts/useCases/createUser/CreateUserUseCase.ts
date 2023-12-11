@@ -2,6 +2,7 @@ import { inject, injectable } from 'tsyringe'
 import { hash } from 'bcrypt'
 import { IUsersRepository } from '../../repositories/IUsersRepository'
 import { ICreateUserDTO } from '../../dtos/ICreateUserDTO'
+import { AppError } from '../../../../errors/AppError'
 
 @injectable()
 class CreateUserUseCase {
@@ -16,7 +17,7 @@ class CreateUserUseCase {
     const userAlreadyExists = await this.usersRepository.findByEmail(data.email)
 
     if (userAlreadyExists) {
-      throw new Error('User Already Exists')
+      throw new AppError('User Already Exists')
     }
 
     // Criptografia de password

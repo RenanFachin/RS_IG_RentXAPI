@@ -124,3 +124,4 @@ Create a new specification
 <!-- https://www.npmjs.com/package/tsyringe -->
 <!-- https://www.npmjs.com/package/bcrypt -->
 <!-- https://www.npmjs.com/package/jsonwebtoken -->
+<!-- https://www.npmjs.com/package/express-async-errors -->

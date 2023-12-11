@@ -1,3 +1,4 @@
+import { AppError } from '../../../../errors/AppError'
 import { ICategoriesRepository } from '../../repositories/ICategoriesRepository'
 import { inject, injectable } from 'tsyringe'
 
@@ -22,7 +23,7 @@ class CreateCategoryUseCase {
       await this.categoriesRepository.findByName(name)
 
     if (categoryAlreadyExists) {
-      throw new Error('Category already exists')
+      throw new AppError('Category already exists')
     }
 
     // Utilizando o repository, para que ele faça a conexão com o db e registre
