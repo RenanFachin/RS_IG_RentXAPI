@@ -30,7 +30,10 @@ export async function ensureAuthenticated(
   // Verificando se o token é válido
   // O método verify lança uma exceção caso dê erro, por isso devemos utilizar try catch
   try {
-    const decoded = verify(token, process.env.JSON_WEB_TOKEN_SECRET) as IPayload
+    const { sub: user_id } = verify(
+      token,
+      process.env.JSON_WEB_TOKEN_SECRET,
+    ) as IPayload
 
     // O retorno contido em decoded:
     /**
@@ -43,10 +46,14 @@ export async function ensureAuthenticated(
 
     // Verificando se este id de usuário existe
     const usersRepository = new UsersRepository()
-    const user = usersRepository.findById(decoded.sub)
+    const user = usersRepository.findById(user_id)
 
     if (!user) {
       throw new AppError('User does not exists!', 401)
+    }
+
+    request.user = {
+      id: user_id,
     }
 
     next()
