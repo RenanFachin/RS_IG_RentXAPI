@@ -20,6 +20,8 @@ class UsersRepository implements IUsersRepository {
       password: data.password,
       email: data.email,
       driver_license: data.driver_license,
+      avatar: data.avatar,
+      id: data.id,
     })
 
     // salvando no db
