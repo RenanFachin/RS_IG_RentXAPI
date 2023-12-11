@@ -3,7 +3,7 @@ import { ImportCategoryUseCase } from './ImportCategoryUseCase'
 import { container } from 'tsyringe'
 
 class ImportCategoryController {
-  handle(request: Request, response: Response): Response {
+  async handle(request: Request, response: Response): Promise<Response> {
     const { file } = request
 
     if (!file) {
@@ -13,7 +13,7 @@ class ImportCategoryController {
     }
 
     const importCategoryUseCase = container.resolve(ImportCategoryUseCase)
-    importCategoryUseCase.execute(file)
+    await importCategoryUseCase.execute(file)
 
     return response.send()
   }

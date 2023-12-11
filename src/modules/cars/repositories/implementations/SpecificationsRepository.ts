@@ -1,3 +1,4 @@
+import { Repository, getRepository } from 'typeorm'
 import { Specification } from '../../entities/Specification'
 import {
   ICreateSpecificationDTO,
@@ -5,31 +6,24 @@ import {
 } from '../ISpecificationsRepository'
 
 class SpecificationsRepository implements ISpecificationsRepository {
-  // criando a tabela "fake" para armazenar as especificações
-  private specificationsTable: Specification[]
-
+  private repository: Repository<Specification>
   constructor() {
-    this.specificationsTable = []
+    this.repository = getRepository(Specification)
   }
 
-  create({ description, name }: ICreateSpecificationDTO): void {
-    // Ao instanciar o specification, o construtor da classe vai gerar o id
-    const specificationData = new Specification()
-
-    // Passando o restante dos dados necessários para criar uma specification
-    Object.assign(specificationData, {
-      name,
+  async create({ description, name }: ICreateSpecificationDTO): Promise<void> {
+    const specification = this.repository.create({
       description,
-      created_at: new Date(),
+      name,
     })
 
-    this.specificationsTable.push(specificationData)
+    await this.repository.save(specification)
   }
 
-  findByName(name: string): Specification | null {
-    const specification = this.specificationsTable.find(
-      (specification) => specification.name === name,
-    )
+  async findByName(name: string): Promise<Specification | null> {
+    const specification = this.repository.findOne({
+      name,
+    })
 
     if (specification === undefined) {
       return null
