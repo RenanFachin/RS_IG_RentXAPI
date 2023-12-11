@@ -1,17 +1,20 @@
 import { ICategoriesRepository } from '../../repositories/ICategoriesRepository'
+import { inject, injectable } from 'tsyringe'
 
 interface IRequest {
   name: string
   description: string
 }
 
-// O service não deve conhecer o request e o response
-// service não precisa conhecer qual o banco de dados e nem nada
+@injectable()
 class CreateCategoryUseCase {
   // SOLID - Inversão de dependência
   // ICategoriesRepository -> é o contrato, ou seja, atende ao principio de liskov
   // eslint-disable-next-line no-useless-constructor
-  constructor(private categoriesRepository: ICategoriesRepository) {}
+  constructor(
+    @inject('CategoriesRepository')
+    private categoriesRepository: ICategoriesRepository,
+  ) { }
 
   async execute({ name, description }: IRequest): Promise<void> {
     // Verificando se já existe uma categoria com este nome

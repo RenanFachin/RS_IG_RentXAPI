@@ -47,3 +47,4 @@ Para acessar a documentação, é necessário iniciar o servidor e após isto ac
 <!-- https://www.npmjs.com/package/csv-parse -->
 <!-- https://www.npmjs.com/package/swagger-ui-express -->
 <!-- https://typeorm.io/ -->
+<!-- https://www.npmjs.com/package/tsyringe -->
