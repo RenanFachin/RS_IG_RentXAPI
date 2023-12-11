@@ -38,6 +38,80 @@ npm run typeorm migration:run
 
 Para acessar a documentação, é necessário iniciar o servidor e após isto acessar **http://localhost:3333/api-docs**
 
+### /categories
+
+#### POST
+##### Summary:
+
+Create a category
+
+##### Description:
+
+Create a new category
+
+##### Responses
+
+| Code | Description |
+| ---- | ----------- |
+| 201 | Created |
+| 500 | Category already exists |
+
+#### GET
+##### Summary:
+
+List all registered categories
+
+##### Responses
+
+| Code | Description |
+| ---- | ----------- |
+| 200 | Success |
+
+### /categories/import
+
+#### POST
+##### Summary:
+
+Upload a new category
+
+##### Description:
+
+Upload a new category
+
+##### Responses
+
+| Code | Description |
+| ---- | ----------- |
+| 201 | Created |
+
+### /specifications
+
+#### POST
+##### Summary:
+
+Create a specification
+
+##### Description:
+
+Create a new specification
+
+##### Responses
+
+| Code | Description |
+| ---- | ----------- |
+| 201 | Created |
+| 500 | Specification already exists |
+
+### Models
+
+
+#### Specification
+
+| Name | Type | Description | Required |
+| ---- | ---- | ----------- | -------- |
+| name | string |  | No |
+| description | string |  | No |
+
 
 <!-- Libs utilizadas -->
 <!-- https://www.npmjs.com/package/tsx -->
