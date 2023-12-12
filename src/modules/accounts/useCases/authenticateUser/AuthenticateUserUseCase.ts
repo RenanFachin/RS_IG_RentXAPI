@@ -3,7 +3,7 @@ import { compare } from 'bcrypt'
 import { sign } from 'jsonwebtoken'
 import { IUsersRepository } from '../../repositories/IUsersRepository'
 import dotenv from 'dotenv'
-import { AppError } from '../../../../errors/AppError'
+import { AppError } from '../../../../shared/errors/AppError'
 
 dotenv.config()
 

@@ -1,9 +1,9 @@
 // Interfaces de "contrato"
-import { IUsersRepository } from '../IUsersRepository'
-import { ICreateUserDTO } from '../../dtos/ICreateUserDTO'
+import { IUsersRepository } from '../../../repositories/IUsersRepository'
+import { ICreateUserDTO } from '../../../dtos/ICreateUserDTO'
 
 import { Repository, getRepository } from 'typeorm'
-import { User } from '../../entities/User'
+import { User } from '../entities/User'
 
 // Implementando a nossa interface de contrato
 class UsersRepository implements IUsersRepository {

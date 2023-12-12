@@ -1,4 +1,4 @@
-import { Category } from '../entities/Category'
+import { Category } from '../infra/typeorm/entities/Category'
 
 // Criando o DTO
 export interface ICreateCategoryDTO {

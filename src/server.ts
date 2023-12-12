@@ -2,14 +2,14 @@ import 'reflect-metadata'
 
 import express from 'express'
 import 'express-async-errors'
-import { router } from './routes'
+import { router } from './shared/infra/routes'
 
 import swaggerUi from 'swagger-ui-express'
 import swaggerFile from './swagger.json'
 
 import './database'
 import './shared/container'
-import { AppError } from './errors/AppError'
+import { AppError } from './shared/errors/AppError'
 
 const app = express()
 

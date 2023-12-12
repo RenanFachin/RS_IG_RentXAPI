@@ -1,9 +1,9 @@
 import { Repository, getRepository } from 'typeorm'
-import { Category } from '../../entities/Category'
+import { Category } from '../entities/Category'
 import {
   ICategoriesRepository,
   ICreateCategoryDTO,
-} from '../ICategoriesRepository'
+} from '../../../repositories/ICategoriesRepository'
 
 // implements ICategoriesRepository -> É o princípio de substituição de liskov
 class CategoriesRepository implements ICategoriesRepository {
