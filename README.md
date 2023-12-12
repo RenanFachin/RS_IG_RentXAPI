@@ -1,12 +1,60 @@
 ## RentX API
-API para registros de uma locadora de automóveis.
+API para registros de uma locadora de automóveis que atenda os requisitos da aplicação.
 
 
-### Regras de negócio
-- [x] Deve ser possível criar uma categoria
-- [x] Deve ser possível listar todas categorias existentes
-- [x] Deve ser possível realizar a leitura de um arquivo para criação de categorias
-- [x] Deve ser possível criar uma especificação
+## Análise de Requisitos
+### Requisitos Funcionais
+**Cadastro de usuário**
+- [x] Deve ser possível realizar o cadastro de um novo usuário.
+**Cadastro de categoria**
+- [x] Deve ser possível cadastrar uma categoria para um veículo.
+**Cadastro de carro**
+- [ ] Deve ser possível cadastrar um novo carro.
+- [ ] Deve ser possível listar todas as categorias.
+**Listagem de carros**
+- [ ] Deve ser possível listar todos os carros disponíveis.
+- [ ] Deve ser possível listar todos os carros disponíveis pelo nome da categoria.
+- [ ] Deve ser possível listar todos os carros disponíveis pelo nome da marca.
+- [ ] Deve ser possível listar todos os carros disponíveis pelo nome do carro.
+**Cadastro de Especificação no carro**
+- [ ] Deve ser possível cadastrar uma especificação para um carro.
+- [ ] Deve ser possível listar todas as especificações.
+- [ ] Deve ser possível listar todos os carros.
+**Cadastro de imagens do carro**
+- [ ] Deve ser possível cadastrar a imagem do carro.
+- [ ] Deve ser possível listar todos os carros.
+**Aluguel de carro**
+- [ ] Deve ser possível cadastrar um aluguel.
+
+### Requisitos Não Funcionais
+- [ ] O banco de dados deve ser PostgreSQL
+**Cadastro de imagens do carro**
+- [ ] Utilizar o multer para upload dos arquivos de imagem.
+
+### Regra de negócio
+**Cadastro de usuário**
+- [x] Não deve ser possível realizar o registro de um usuário que já tenha o email utilizado cadastrado.
+- [x] A senha do usuário deve estar criptografada
+**Cadastro de categoria**
+- [x] Um veículo só pode ter uma categoria vinculada a ele.
+**Cadastro de carro**
+- [ ] Não deve ser possível cadastrar um carro com uma placa já cadastrada.
+- [ ] Não deve ser possível alterar a placa de um carro já existente.
+- [ ] O carro deve ser cadastrado, por padrão, com a propriedade available como true.
+- [ ] O usuário responsável pelo cadastro deve ser um usuário adminstrador.
+**Listagem de carros**
+- [ ] O usuário não precisa estar autenticado no sistema para listar os carros.
+**Cadastro de Especificação no carro**
+- [ ] Não deve ser possível cadastrar uma especificação para um carro não cadastrado.
+- [ ] Não deve ser possível cadastrar uma especificação que já esteja cadastrada em um veículo.
+- [ ] O usuário responsável pelo cadastro de especificação deve ser um usuário adminstrador.
+**Cadastro de imagens do carro**
+- [ ] O usuário deve poder cadastrar mais de uma imagem para o mesmo carro.
+- [ ] O usuário responsável pelo cadastro das imagens deve ser um usuário adminstrador.
+**Alugel de carro**
+- [ ] O aluguel deve ter duração mínima de 24 hora.
+- [ ] Não deve ser possível cadastrar um novo aluguel caso já exista um aberto para o mesmo usuário.
+- [ ] Não deve ser possível cadastrar um novo aluguel caso já exista um aberto para o mesmo carro.
 
 ## Configuração do Projeto
 
