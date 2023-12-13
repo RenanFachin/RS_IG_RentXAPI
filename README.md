@@ -26,7 +26,8 @@ API para registros de uma locadora de automóveis que atenda os requisitos da ap
 - [ ] Deve ser possível cadastrar um aluguel.
 
 ### Requisitos Não Funcionais
-- [ ] O banco de dados deve ser PostgreSQL
+- [x] O usuário com permissão de admin deve ser criado via seed.
+- [ ] O banco de dados deve ser PostgreSQL.
 **Cadastro de imagens do carro**
 - [ ] Utilizar o multer para upload dos arquivos de imagem.
 
@@ -78,6 +79,11 @@ docker-compose up
 Criando as tabelas (Rodando as migrations)
 ```bash
 npm run typeorm migration:run
+```
+
+Rodando o seed para criar um usuário com permissão de admin
+```bash
+npm run seed:admin
 ```
 
 ## Documentação do projeto

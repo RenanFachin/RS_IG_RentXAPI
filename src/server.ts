@@ -7,7 +7,9 @@ import { router } from './shared/infra/http/routes'
 import swaggerUi from 'swagger-ui-express'
 import swaggerFile from './swagger.json'
 
-import './database'
+// import './database'
+import createConnection from './database'
+
 import './shared/container'
 import { AppError } from './shared/errors/AppError'
 
