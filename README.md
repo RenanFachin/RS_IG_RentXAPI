@@ -9,8 +9,7 @@ API para registros de uma locadora de automóveis que atenda os requisitos da ap
 **Cadastro de categoria**
 - [x] Deve ser possível cadastrar uma categoria para um veículo.
 **Cadastro de carro**
-- [ ] Deve ser possível cadastrar um novo carro.
-- [ ] Deve ser possível listar todas as categorias.
+- [X] Deve ser possível cadastrar um novo carro.
 **Listagem de carros**
 - [ ] Deve ser possível listar todos os carros disponíveis.
 - [ ] Deve ser possível listar todos os carros disponíveis pelo nome da categoria.
@@ -38,10 +37,9 @@ API para registros de uma locadora de automóveis que atenda os requisitos da ap
 **Cadastro de categoria**
 - [x] Um veículo só pode ter uma categoria vinculada a ele.
 **Cadastro de carro**
-- [ ] Não deve ser possível cadastrar um carro com uma placa já cadastrada.
-- [ ] Não deve ser possível alterar a placa de um carro já existente.
-- [ ] O carro deve ser cadastrado, por padrão, com a propriedade available como true.
-- [ ] O usuário responsável pelo cadastro deve ser um usuário adminstrador.
+- [x] Não deve ser possível cadastrar um carro com uma placa já cadastrada.
+- [X] O carro deve ser cadastrado, por padrão, com a propriedade available como true.
+- [ ] O usuário responsável pelo cadastro deve ser um usuário adminstrador.*
 **Listagem de carros**
 - [ ] O usuário não precisa estar autenticado no sistema para listar os carros.
 **Cadastro de Especificação no carro**
