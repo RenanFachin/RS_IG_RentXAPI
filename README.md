@@ -11,10 +11,10 @@ API para registros de uma locadora de automóveis que atenda os requisitos da ap
 **Cadastro de carro**
 - [X] Deve ser possível cadastrar um novo carro.
 **Listagem de carros**
-- [ ] Deve ser possível listar todos os carros disponíveis.
-- [ ] Deve ser possível listar todos os carros disponíveis pelo nome da categoria.
-- [ ] Deve ser possível listar todos os carros disponíveis pelo nome da marca.
-- [ ] Deve ser possível listar todos os carros disponíveis pelo nome do carro.
+- [x] Deve ser possível listar todos os carros disponíveis.
+- [x] Deve ser possível listar todos os carros disponíveis pelo nome da categoria.
+- [x] Deve ser possível listar todos os carros disponíveis pelo nome da marca.
+- [x] Deve ser possível listar todos os carros disponíveis pelo nome do carro.
 **Cadastro de Especificação no carro**
 - [ ] Deve ser possível cadastrar uma especificação para um carro.
 - [ ] Deve ser possível listar todas as especificações.
@@ -27,9 +27,9 @@ API para registros de uma locadora de automóveis que atenda os requisitos da ap
 
 ### Requisitos Não Funcionais
 - [x] O usuário com permissão de admin deve ser criado via seed.
-- [ ] O banco de dados deve ser PostgreSQL.
+- [x] O banco de dados deve ser PostgreSQL.
 **Cadastro de imagens do carro**
-- [ ] Utilizar o multer para upload dos arquivos de imagem.
+- [x] Utilizar o multer para upload dos arquivos de imagem.
 
 ### Regra de negócio
 **Cadastro de usuário**
@@ -42,7 +42,7 @@ API para registros de uma locadora de automóveis que atenda os requisitos da ap
 - [X] O carro deve ser cadastrado, por padrão, com a propriedade available como true.
 - [x] O usuário responsável pelo cadastro deve ser um usuário adminstrador.*
 **Listagem de carros**
-- [ ] O usuário não precisa estar autenticado no sistema para listar os carros.
+- [x] O usuário não precisa estar autenticado no sistema para listar os carros.
 **Cadastro de Especificação no carro**
 - [ ] Não deve ser possível cadastrar uma especificação para um carro não cadastrado.
 - [ ] Não deve ser possível cadastrar uma especificação que já esteja cadastrada em um veículo.
