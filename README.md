@@ -17,8 +17,6 @@ API para registros de uma locadora de automóveis que atenda os requisitos da ap
 - [x] Deve ser possível listar todos os carros disponíveis pelo nome do carro.
 **Cadastro de Especificação no carro**
 - [ ] Deve ser possível cadastrar uma especificação para um carro.
-- [ ] Deve ser possível listar todas as especificações.
-- [ ] Deve ser possível listar todos os carros.
 **Cadastro de imagens do carro**
 - [ ] Deve ser possível cadastrar a imagem do carro.
 - [ ] Deve ser possível listar todos os carros.
