@@ -48,7 +48,7 @@ API para registros de uma locadora de automóveis que atenda os requisitos da ap
 - [x] O usuário deve poder cadastrar mais de uma imagem para o mesmo carro.
 - [x] O usuário responsável pelo cadastro das imagens deve ser um usuário adminstrador.
 **Alugel de carro**
-- [ ] O aluguel deve ter duração mínima de 24 hora.
+- [x] O aluguel deve ter duração mínima de 24 hora.
 - [x] Não deve ser possível cadastrar um novo aluguel caso já exista um aberto para o mesmo usuário.
 - [x] Não deve ser possível cadastrar um novo aluguel caso já exista um aberto para o mesmo carro.
 

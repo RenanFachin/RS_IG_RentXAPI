@@ -1,10 +1,7 @@
+import { IDateProvider } from '../../../../shared/container/providers/dateProvider/IDateProvider'
 import { AppError } from '../../../../shared/errors/AppError'
 import { Rental } from '../../infra/typeorm/entities/Rental'
 import { IRentalsRepository } from '../../repositories/IRentalsRepository'
-import dayjs from 'dayjs'
-import utc from 'dayjs/plugin/utc'
-
-dayjs.extend(utc)
 
 interface IRequest {
   user_id: string
@@ -13,7 +10,10 @@ interface IRequest {
 }
 
 class CreateRentalUseCase {
-  constructor(private rentalsRepository: IRentalsRepository) { }
+  constructor(
+    private rentalsRepository: IRentalsRepository,
+    private dateProvider: IDateProvider,
+  ) { }
 
   async execute({
     user_id,
@@ -37,14 +37,11 @@ class CreateRentalUseCase {
     }
 
     // Comparando a data de retorno com a atual (em horas)
-    const expectedReturnDateFormat = dayjs(expected_return_date)
-      .utc()
-      .local()
-      .format()
-
-    const dateNow = dayjs().utc().local().format()
-
-    const compare = dayjs(expectedReturnDateFormat).diff(dateNow, 'hours')
+    const dateNow = this.dateProvider.dateNow()
+    const compare = this.dateProvider.compareInHours(
+      expected_return_date,
+      dateNow,
+    )
 
     if (compare < minimumNumberOfHoursForRental) {
       throw new AppError('Rental must be for a minimum of 24 hours')
