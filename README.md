@@ -20,7 +20,7 @@ API para registros de uma locadora de automóveis que atenda os requisitos da ap
 **Cadastro de imagens do carro**
 - [x] Deve ser possível cadastrar a imagem do carro.
 **Aluguel de carro**
-- [ ] Deve ser possível cadastrar um aluguel.
+- [x] Deve ser possível cadastrar um aluguel.
 
 ### Requisitos Não Funcionais
 - [x] O usuário com permissão de admin deve ser criado via seed.
@@ -49,8 +49,8 @@ API para registros de uma locadora de automóveis que atenda os requisitos da ap
 - [x] O usuário responsável pelo cadastro das imagens deve ser um usuário adminstrador.
 **Alugel de carro**
 - [ ] O aluguel deve ter duração mínima de 24 hora.
-- [ ] Não deve ser possível cadastrar um novo aluguel caso já exista um aberto para o mesmo usuário.
-- [ ] Não deve ser possível cadastrar um novo aluguel caso já exista um aberto para o mesmo carro.
+- [x] Não deve ser possível cadastrar um novo aluguel caso já exista um aberto para o mesmo usuário.
+- [x] Não deve ser possível cadastrar um novo aluguel caso já exista um aberto para o mesmo carro.
 
 ## Configuração do Projeto
 
