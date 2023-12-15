@@ -18,7 +18,7 @@ API para registros de uma locadora de automóveis que atenda os requisitos da ap
 **Cadastro de Especificação no carro**
 - [x] Deve ser possível cadastrar uma especificação para um carro.
 **Cadastro de imagens do carro**
-- [ ] Deve ser possível cadastrar a imagem do carro.
+- [x] Deve ser possível cadastrar a imagem do carro.
 **Aluguel de carro**
 - [ ] Deve ser possível cadastrar um aluguel.
 
@@ -45,7 +45,7 @@ API para registros de uma locadora de automóveis que atenda os requisitos da ap
 - [x] Não deve ser possível cadastrar uma especificação que já esteja cadastrada em um veículo.
 - [x] O usuário responsável pelo cadastro de especificação deve ser um usuário adminstrador.
 **Cadastro de imagens do carro**
-- [ ] O usuário deve poder cadastrar mais de uma imagem para o mesmo carro.
+- [x] O usuário deve poder cadastrar mais de uma imagem para o mesmo carro.
 - [x] O usuário responsável pelo cadastro das imagens deve ser um usuário adminstrador.
 **Alugel de carro**
 - [ ] O aluguel deve ter duração mínima de 24 hora.
