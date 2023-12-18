@@ -176,3 +176,4 @@ Create a new specification
 <!-- https://www.npmjs.com/package/jsonwebtoken -->
 <!-- https://www.npmjs.com/package/express-async-errors -->
 <!-- https://jestjs.io/pt-BR/ -->
+<!-- https://www.npmjs.com/package/supertest -->
