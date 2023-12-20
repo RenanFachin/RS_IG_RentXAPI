@@ -54,7 +54,7 @@ API para registros de uma locadora de automóveis que atenda os requisitos da ap
 - [x] O aluguel deve ter duração mínima de 24 hora.
 - [x] Não deve ser possível cadastrar um novo aluguel caso já exista um aberto para o mesmo usuário.
 - [x] Não deve ser possível cadastrar um novo aluguel caso já exista um aberto para o mesmo carro.
-- [ ] Ao realizar o aluguel, o status do carro deverá ser alterado para indisponível.
+- [x] Ao realizar o aluguel, o status do carro deverá ser alterado para indisponível.
 **Devolução de carro**
 - [ ] Se o carro for devolvido com menos de 24 horas, deverá ser cobrado a diária completa.
 - [ ] Ao realizar a devolução, o carro deverá ser liberado para outro aluguel.
@@ -62,6 +62,7 @@ API para registros de uma locadora de automóveis que atenda os requisitos da ap
 - [ ] Ao realizar a devolução, deverá ser calculado o total do aluguel.
 - [ ] Caso o horário de devolução seja superior ao horário previsto de entrega, deverá ser cobrado multa proporcional aos dias em atraso.
 - [ ] Caso haja multa, deverá ser somado ao total do aluguel.
+- [ ] O usuário deve estar logado e autenticado para realizar a devolução.
 
 ## Configuração do Projeto
 
