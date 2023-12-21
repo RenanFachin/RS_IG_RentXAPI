@@ -22,7 +22,9 @@ API para registros de uma locadora de automóveis que atenda os requisitos da ap
 **Aluguel de carro**
 - [x] Deve ser possível cadastrar um aluguel.
 **Devolução de carro**
-- [ ] Deve ser possível realizar a devolução de um carro alugado
+- [x] Deve ser possível realizar a devolução de um carro alugado
+**Listagem de alugueis para usuário**
+- [ ] Deve ser possível realizar a busca de todos os alugueis para o usuário
 
 ### Requisitos Não Funcionais
 - [x] O usuário com permissão de admin deve ser criado via seed.
@@ -63,6 +65,8 @@ API para registros de uma locadora de automóveis que atenda os requisitos da ap
 - [ ] Caso o horário de devolução seja superior ao horário previsto de entrega, deverá ser cobrado multa proporcional aos dias em atraso.
 - [ ] Caso haja multa, deverá ser somado ao total do aluguel.
 - [ ] O usuário deve estar logado e autenticado para realizar a devolução.
+**Listagem de alugueis para usuário**
+- [ ] O usuário deve estar logado na aplicação
 
 ## Configuração do Projeto
 
