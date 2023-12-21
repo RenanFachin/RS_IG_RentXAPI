@@ -58,15 +58,15 @@ API para registros de uma locadora de automóveis que atenda os requisitos da ap
 - [x] Não deve ser possível cadastrar um novo aluguel caso já exista um aberto para o mesmo carro.
 - [x] Ao realizar o aluguel, o status do carro deverá ser alterado para indisponível.
 **Devolução de carro**
-- [ ] Se o carro for devolvido com menos de 24 horas, deverá ser cobrado a diária completa.
-- [ ] Ao realizar a devolução, o carro deverá ser liberado para outro aluguel.
-- [ ] Ao realizar a devolução, o usuário deverá ser liberado para outro aluguel.
-- [ ] Ao realizar a devolução, deverá ser calculado o total do aluguel.
-- [ ] Caso o horário de devolução seja superior ao horário previsto de entrega, deverá ser cobrado multa proporcional aos dias em atraso.
-- [ ] Caso haja multa, deverá ser somado ao total do aluguel.
-- [ ] O usuário deve estar logado e autenticado para realizar a devolução.
+- [x] Se o carro for devolvido com menos de 24 horas, deverá ser cobrado a diária completa.
+- [x] Ao realizar a devolução, o carro deverá ser liberado para outro aluguel.
+- [x] Ao realizar a devolução, o usuário deverá ser liberado para outro aluguel.
+- [x] Ao realizar a devolução, deverá ser calculado o total do aluguel.
+- [x] Caso o horário de devolução seja superior ao horário previsto de entrega, deverá ser cobrado multa proporcional aos dias em atraso.
+- [x] Caso haja multa, deverá ser somado ao total do aluguel.
+- [x] O usuário deve estar logado e autenticado para realizar a devolução.
 **Listagem de alugueis para usuário**
-- [ ] O usuário deve estar logado na aplicação
+- [x] O usuário deve estar logado na aplicação
 
 ## Configuração do Projeto
 
@@ -103,7 +103,7 @@ npm run seed:admin
 
 Para acessar a documentação, é necessário iniciar o servidor e após isto acessar **http://localhost:3333/api-docs**
 
-### /categories
+<!-- ### /categories
 
 #### POST
 ##### Summary:
@@ -175,7 +175,7 @@ Create a new specification
 | Name | Type | Description | Required |
 | ---- | ---- | ----------- | -------- |
 | name | string |  | No |
-| description | string |  | No |
+| description | string |  | No | -->
 
 
 <!-- Libs utilizadas -->
