@@ -3,6 +3,8 @@ import { verify } from 'jsonwebtoken'
 import dotEnv from 'dotenv'
 import { UsersRepository } from '../../../../modules/accounts/infra/typeorm/repositories/UsersRepository'
 import { AppError } from '../../../errors/AppError'
+import { UsersTokensRepository } from '../../../../modules/accounts/infra/typeorm/repositories/UsersTokenRepository'
+import auth from '../../../../config/auth'
 
 dotEnv.config()
 
@@ -18,6 +20,8 @@ export async function ensureAuthenticated(
   // Recebendo o token (Bearer Token -> header)
   const authHeader = request.headers.authorization
 
+  const userTokensRepository = new UsersTokensRepository()
+
   // verificar se o authHeader está preenchido
   if (!authHeader) {
     throw new AppError('Token missing', 401)
@@ -32,7 +36,7 @@ export async function ensureAuthenticated(
   try {
     const { sub: user_id } = verify(
       token,
-      process.env.JSON_WEB_TOKEN_SECRET,
+      auth.secret_refresh_token,
     ) as IPayload
 
     // O retorno contido em decoded:
@@ -44,9 +48,10 @@ export async function ensureAuthenticated(
         }
      */
 
-    // Verificando se este id de usuário existe
-    const usersRepository = new UsersRepository()
-    const user = usersRepository.findById(user_id)
+    const user = await userTokensRepository.findByUserIdAndRefreshToken(
+      user_id,
+      token,
+    )
 
     if (!user) {
       throw new AppError('User does not exists!', 401)
