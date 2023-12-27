@@ -27,9 +27,9 @@ A RentX API atende a uma série de requisitos funcionais e não funcionais, gara
 **Listagem de alugueis para usuário**
 - [x] Deve ser possível realizar a busca de todos os alugueis para o usuário
 **Recuperação de senha**
-- [ ] Deve ser possível que o usuário consiga recuperar a senha informando o e-mail de registro.
-- [ ] O Usuário deve receber um e-mail com o passo a passo para a recuperação da senha.
-- [ ] O Usuário deve conseguir cadastrar uma nova senha.
+- [x] Deve ser possível que o usuário consiga recuperar a senha informando o e-mail de registro.
+- [x] O Usuário deve receber um e-mail com o passo a passo para a recuperação da senha.
+- [x] O Usuário deve conseguir cadastrar uma nova senha.
 
 ### Requisitos Não Funcionais
 - [x] O usuário com permissão de admin deve ser criado via seed.
@@ -73,8 +73,8 @@ A RentX API atende a uma série de requisitos funcionais e não funcionais, gara
 **Listagem de alugueis para usuário**
 - [x] O usuário deve estar logado na aplicação
 **Recuperação de senha**
-- [ ] O usuário precisa informar a uma nova senha
-- [ ] O link enviado para recuperação deve expirar em 3 horas
+- [x] O usuário precisa informar a uma nova senha
+- [x] O link enviado para recuperação deve expirar em 3 horas
 
 ## Configuração do Projeto
 
