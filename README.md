@@ -1,8 +1,9 @@
 ## RentX API
-API para registros de uma locadora de automóveis que atenda os requisitos da aplicação.
-
+A RentX API é uma aplicação destinada à gestão e controle de aluguel de veículos. Desenvolvida para proporcionar uma experiência eficiente e segura, a API oferece uma variedade de funcionalidades que abrangem desde o cadastro de usuários até a gestão completa de reservas e devoluções.
 
 ## Análise de Requisitos
+A RentX API atende a uma série de requisitos funcionais e não funcionais, garantindo a integridade dos dados, a segurança das transações e a experiência do usuário. Além disso, diversas regras de negócio são implementadas para manter a consistência e o bom funcionamento da aplicação.
+
 ### Requisitos Funcionais
 **Cadastro de usuário**
 - [x] Deve ser possível realizar o cadastro de um novo usuário.
@@ -24,7 +25,11 @@ API para registros de uma locadora de automóveis que atenda os requisitos da ap
 **Devolução de carro**
 - [x] Deve ser possível realizar a devolução de um carro alugado
 **Listagem de alugueis para usuário**
-- [ ] Deve ser possível realizar a busca de todos os alugueis para o usuário
+- [x] Deve ser possível realizar a busca de todos os alugueis para o usuário
+**Recuperação de senha**
+- [ ] Deve ser possível que o usuário consiga recuperar a senha informando o e-mail de registro.
+- [ ] O Usuário deve receber um e-mail com o passo a passo para a recuperação da senha.
+- [ ] O Usuário deve conseguir cadastrar uma nova senha.
 
 ### Requisitos Não Funcionais
 - [x] O usuário com permissão de admin deve ser criado via seed.
@@ -67,6 +72,9 @@ API para registros de uma locadora de automóveis que atenda os requisitos da ap
 - [x] O usuário deve estar logado e autenticado para realizar a devolução.
 **Listagem de alugueis para usuário**
 - [x] O usuário deve estar logado na aplicação
+**Recuperação de senha**
+- [ ] O usuário precisa informar a uma nova senha
+- [ ] O link enviado para recuperação deve expirar em 3 horas
 
 ## Configuração do Projeto
 
@@ -192,3 +200,4 @@ Create a new specification
 <!-- https://www.npmjs.com/package/express-async-errors -->
 <!-- https://jestjs.io/pt-BR/ -->
 <!-- https://www.npmjs.com/package/supertest -->
+<!-- https://ethereal.email/ -->
